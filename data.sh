@@ -1,4 +1,3 @@
-
 version: '3.3'
 services:
   db:
@@ -8,9 +7,9 @@ services:
       - db_data:/var/lib/mysql
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=Mujahidjani#28
+      - MYSQL_ROOT_PASSWORD=wordpress
       - MYSQL_DATABASE=wordpress
-      - MYSQL_USER=mujahid
+      - MYSQL_USER=wordpress
       - MYSQL_PASSWORD=admin123
     expose:
       - "3306"
@@ -23,7 +22,7 @@ services:
     restart: always
     environment:
       - WORDPRESS_DB_HOST=db
-      - WORDPRESS_DB_USER=mujahid
+      - WORDPRESS_DB_USER=wordpress
       - WORDPRESS_DB_PASSWORD=admin123
       - WORDPRESS_DB_NAME=wordpress
 
